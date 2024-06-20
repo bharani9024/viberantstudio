@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -31,7 +31,7 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
@@ -70,7 +70,7 @@ nav {
 }
 
 .btn {
-    background: #333;
+    background: #ff5733;
     color: #fff;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -79,18 +79,18 @@ nav {
 }
 
 .btn:hover {
-    background: #555;
+    background: #ff784d;
 }
 
 .services {
-    padding: 2rem 0;
+    padding: 4rem 0;
     text-align: center;
     background-color: #fff;
 }
 
 .services h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .service-container {
@@ -102,7 +102,7 @@ nav {
 
 .service-box {
     background: #f4f4f4;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(50% - 2rem);
@@ -113,6 +113,43 @@ nav {
     margin-top: 0;
 }
 
+.portfolio {
+    padding: 4rem 0;
+    background-color: #e8e8e8;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.portfolio-info {
+    padding: 1rem 0;
+    text-align: center;
+}
+
 .footer-content {
     background: #333;
     color: #fff;
@@ -120,6 +157,11 @@ nav {
     padding: 1rem 0;
 }
 
-.footer-content p {
-    margin: 0;
+.footer-content a {
+    color: #ff5733;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
 }
