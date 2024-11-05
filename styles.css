@@ -1,144 +1,239 @@
-/* Reset and Base Styles */
+/* Reset basic styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: white;
-    background-color: #1e1e2f;
-    overflow-x: hidden;
-}
-
-header {
+.background {
+    background-image: url('images/stock.jpg'); 
+    background-size: cover;
+    background-position: center;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('header-bg.jpg') no-repeat center center/cover;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+}
+.background-overlay {
+    background-image: url('images/stock.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 0; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+.navbar h1 {
+    font-size: 2em;
+}
+
+.navbar nav a {
     color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-header .content h1 {
-    font-size: 4rem;
-    animation: slide-in 2s ease-out forwards;
-}
-
-header .content p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    animation: fade-in 3s ease-out forwards;
-}
-
-nav ul {
-    margin-top: 20px;
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
+    margin-left: 15px;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #f1c40f;
+.navbar nav a:hover {
+    color: #ffcc00; 
 }
 
-section {
-    padding: 80px 20px;
+.center-content {
     text-align: center;
+    margin-bottom: 50px;
 }
 
-section#about, section#contact {
-    background-color: #2c2c3e;
-    margin: 50px 0;
+.center-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-section#services {
-    background: url('services-bg.jpg') no-repeat center center/cover;
-    padding: 120px 20px;
-    color: white;
-    background-attachment: fixed;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-section p, section div {
-    font-size: 1.2rem;
+.center-content p {
+    font-size: 1.2em;
     margin-bottom: 20px;
+    color: black;
 }
 
-.portfolio-item, .service {
-    margin: 20px auto;
-    width: 80%;
-}
-
-.contact-button {
+.view-products-btn {
     display: inline-block;
-    background-color: #f1c40f;
-    color: #333;
-    padding: 15px 25px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff6600; 
+    border: none;
+    border-radius: 8px;
     text-decoration: none;
-    font-size: 1.2rem;
     transition: background-color 0.3s ease;
 }
 
-.contact-button:hover {
-    background-color: #e1b408;
+.view-products-btn:hover {
+    background-color: #ffcc00; 
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
 }
 
-/* Animations */
-@keyframes slide-in {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fade-in 2s forwards;
-}
-
-footer {
-    background-color: #1e1e2f;
-    padding: 20px;
+header {
+    background: #333;
+    padding: 10px;
+    color: #fff;
     text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.stock {
+    padding: 40px;
+    text-align: center;
+}
+
+.stock h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.stock-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.stock-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.stock-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card-image:hover img {
+    transform: scale(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff5722;
     color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.badge.sale {
+    background-color: #e91e63;
+}
+
+.quick-view {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card-image:hover .quick-view {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.new-price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.old-price {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
 }
